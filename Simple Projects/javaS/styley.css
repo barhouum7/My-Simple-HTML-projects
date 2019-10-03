@@ -1,0 +1,44 @@
+body
+{
+	background: #f3f3f3 ;
+	font-family: monospace;
+}
+
+.container
+{
+	width: 900px ;
+	margin: auto;
+	background: #fff ;
+	padding: 80px ;
+}
+
+h1
+{
+	font-size: 50px ;
+}
+
+button
+{
+	background: #080;
+	color: #fff ;
+	border: none;
+	width: 200px;
+	cursor: pointer;
+	padding: 8px;
+	font-size: 20px;
+	border-radius: 20px;
+	outline: 0 
+}
+
+button:hover
+{
+	background: #020 ;
+}
+
+li
+{
+	font-size: 18px ;
+	margin-bottom: 10px ;
+	text-transform: capitalize;
+	cursor: pointer;
+}
