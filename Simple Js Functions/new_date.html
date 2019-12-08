@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Date !!</title>
+</head>
+<body>
+	<script type="text/javascript" language="javascript">
+		//La Date !
+		d = new Date() ;
+
+		j = d.getDate() ;
+		m = d.getMonth()+1 ;
+		a = d.getFullYear() ;
+		ch1 = j+"/"+m+"/"+a ;
+
+		//Le temps !
+		h = d.getHours() ;
+		mi = d.getMinutes() ;
+		s = d.getSeconds() ;
+		ch2 = h+":"+mi+":"+s ;
+
+		document.write("<h3 style=color:red><b><i> La Date est : </i></b></h3>"+ch1+"<h3 style=color:blue><b><i>Le temps est : </i></b></h3>"+ch2) ;
+	</script>
+
+</body>
+</html>

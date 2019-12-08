@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hello !!</title>
+	<script type="text/javascript">
+		d=new Date();
+		
+		j=d.getDate() ;
+		m=d.getMonth()+1 ;
+		a=d.getFullYear() ;
+		ch1 = j+"/"+m+"/"+a ;
+		document.write(ch1+"<br>");
+		
+		//Le temps
+		h = d.getHours() ;
+		mi = d.getMinutes() ;
+		s = d.getSeconds() ;
+		ch2 = h+":"+mi+":"+s ;
+		document.write(ch2);
+
+		function f(){
+
+
+			alert("bienvenu");
+		}
+
+
+		function f1(){
+
+
+			alert("barra margeeed !!");
+		}
+	</script>	
+
+
+</head>
+<body onload="f()" onunload="f1()">
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello world !!</title>
+	<script type="text/javascript" language="javascript">
+		d = new Date ;
+
+		//Script de la date d'Aujoud'hui !
+		j = d.getDate() ;
+		m = d.getMonth()+1 ;
+		a = d.getFullYear() ;
+		ch1 = j+"/"+m+"/"+a ;
+
+		//Script de temps actuelle !
+		h = d.getHours() ;
+		mi = d.getMinutes() ;
+		s = d.getSeconds() ;
+		ch2 = h+":"+mi+":"+s ;
+
+		document.write("<h3 style = color:red><i>La date d'Aujoud'hui : </i></h3>"+ch1+"<h3 style = color:green><i>Le temps actuelle : </i></h3>"+ch2) ;
+		function f(){
+			alert("Good Morning Sir! ^_^ ");
+		}
+
+	</script>
+
+</head>
+<body bgcolor="#C0C0" onload="f()">
+	
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Page 2 !!!</title>
+</head>
+<body bgcolor="#C0C0" onload="javascript : alert('Welcome everybody !! :) \n Hello ! ') ;">
+	<script type="text/javascript" language="javascript">
+		do
+		
+		dc = Number(prompt("Entrer le note de contrôle : ","Note"));
+		
+		while (dc <0 || dc >20) ;
+		
+		do
+			
+			ds = Number(prompt("Entrer le note de synthèse :","Note"));
+		
+		while (ds <0 || ds >20) ;
+		
+		var moy = (dc + ds*2) /3 ;
+
+		if (moy >= 10)
+			{document.write("<font color='green' size='20'>Votre moyenne est : "+moy+"</font>") ;}
+		else
+			{document.write("<font color='red' size='20'>Votre moyenne est : "+moy+"</font>") ;}
+	</script>
+</body>
+</html>

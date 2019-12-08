@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+<body>
+	<script type="text/javascript" language="javascript">
+
+		var m = Number(prompt("Taper le mois : ","mois"));
+
+		switch (m)
+		{
+			case 1 : case 2 : case 12 : ch = "Hiver" ; break;
+			case 3 : case 4 : case 5 : ch = "Printemps" ; break;
+			case 6 : case 7 : case 8 : ch = "ete" ;break;
+			case 9 : case 10 : case 11 : ch = "automne" ;break;
+
+			default : ch = "ERREUR !" ;
+		}
+		alert(ch);
+	</script>
+</body>
+</html>

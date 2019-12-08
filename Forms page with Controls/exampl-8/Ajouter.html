@@ -1,0 +1,64 @@
+﻿<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ajouter un abonnement</title>
+	<script language="javascript" src="controle.js"></script>
+</head>
+
+<body bgcolor="#6AE6FF">
+	<form name="f" method="POST" action="Ajouter.php" onsubmit = "return verifAjouter();">
+		<h1 align="center"><font color="#FFFF00" face="Bernard MT Condensed">Ajout d'un abonnement</font></h1>
+		<hr width="40%" color="#FFFFCC" size="5">
+		
+			<table border="0" width="30%" cellspacing="5" align="center">
+				<tr>
+					<td><b><font face="Copperplate Gothic Light" color="#FFFFCC">CIN :</font></b></td>
+					<td><font face="Copperplate Gothic Light" size="3">
+					<input name="T1" size="20"></font></td>
+				</tr>
+				<tr>
+					<td><b><font face="Copperplate Gothic Light" color="#FFFFCC">Titre :</font></b></td>
+					<td><font face="Copperplate Gothic Light" size="3">
+					<select size="1" name="D1">
+					<option>Choisir un titre</option>
+					<option value="Inf12">Java pour débutants</option>
+					<option value="Lit13">Mots fléchés</option>
+					<option value="Sci04">Sciences et vie</option>
+					<option value="Spt01">Le meilleur du foot</option>
+					</select></font></td>
+				</tr>
+				<tr>
+					<td><b><font face="Copperplate Gothic Light" color="#FFFFCC">Durée (Mois) :</font></b></td>
+					<td>
+						<table border="0" width="80%" align="left">
+							<tr>
+								<td>
+									<input type="radio" value="3" name="R1">
+									<font color="#FFFFCC" face="Copperplate Gothic Light"><b>3</b></font>
+								</td>
+								<td>
+									<input type="radio" value="6" name="R1">
+									<font color="#FFFFCC" face="Copperplate Gothic Light"><b>6</b></font>
+								</td>
+								<td>
+									<input type="radio" value="12" name="R1">
+									<font color="#FFFFCC" face="Copperplate Gothic Light"><b>12</b></font>
+								</td>
+							</tr>
+						</table>
+					
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="reset" value="Annuler" name="B2">
+						<input type="submit" value="Valider" name="B1" onclick="verifAjouter()">
+					</td>
+				</tr>
+		</table>
+
+	</form>
+
+</body>
+
+</html>

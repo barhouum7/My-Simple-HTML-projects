@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Nouvelle page 1</title>
+		<script language="javascript" src="control.js"></script>
+	</head>
+
+<body onload="chargerDate()">
+<form name="f" onsubmit="return verif()">
+	<div>
+		<p><h1 align="center" style="color: red">Inscription</h1></p><br>
+		<hr align="center" width="65%" style="margin-bottom: 20px;" />
+	</div>
+	<div>
+		<table border="0" width="100%" align="center">
+			
+			<tr>
+				<td>
+				<p align="center"><font size="4"><b><i>Matricule :</i></b></font></td>
+				<td><input type="text" name="ma" size="20"></td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">NCIN :</font></b></i></td>
+				<td><input type="text" name="c" size="20"></td>
+			</tr>
+
+			<tr>
+				<td align="center"><i><b><font size="4">Nom :</font></b></i></td>
+				<td><input type="text" name="n" size="20"></td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">Prénom :</font></b></i></td>
+				<td><input type="text" name="p" size="20"></td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">Date de naissance :</font></b></i></td>
+				<td>
+                    <select size="1" name="j">
+                        <option>Jour</option>
+                    </select> /
+                    <select size="1" name="m">
+                        <option>Mois</option>
+                    </select> /
+                    <select size="1" name="a">
+                        <option>Année</option>
+                    </select>
+                </td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">Sexe :</font></b></i></td>
+				<td><input type="radio" value="V1" name="s">&nbsp;&nbsp;Masculin
+				<input type="radio" value="V6" name="s">&nbsp;&nbsp;Féminin</td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">Etat civil :</font></b></i></td>
+				<td><input type="radio" value="V3" name="ec">&nbsp;&nbsp;Célibataire
+				<input type="radio" value="V4" name="ec">&nbsp;&nbsp;Marié
+				<input type="radio" value="V5" name="ec">&nbsp;&nbsp;Divorcé</td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">Nombre d'enfants assurés :</font></b></i></td>
+				<td><input type="text" name="nbe" size="20"></td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">Type d'assurance :</font></b></i></td>
+				<td><select size="1" name="ta">
+				<option>Choisir le Type</option>
+				<option>Santé publique</option>
+				<option>Medecin de famille</option>
+				<option>Remboursement de dépenses</option>
+				</select></td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">E-mail :</font></b></i></td>
+				<td><input type="text" name="em" size="20"></td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">Adresse :</font></b></i></td>
+				<td><textarea rows="2" name="adr" cols="20"></textarea></td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">Téléphone :</font></b></i></td>
+				<td><input type="text" name="tel" size="20"></td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">Liste d'hôpital :</font></b></i></td>
+				<td><select size="3" name="lh">
+				<option>La rabta</option>
+				<option>Habib thameur</option>
+				<option>Mami-Ariana</option>
+				</select></td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">Maladies chroniques :</font></b></i></td>
+				<td><input type="checkbox" name="mc1" value="ON"> Le diabète<p>
+				<input type="checkbox" name="mc2" value="ON"> L'asthme</p>
+				<p><input type="checkbox" name="mc3" value="ON"> HTA sévère</p>
+				<p><input type="checkbox" name="mc4" value="ON"> Tuberculose 
+				active.</p>
+				<p><input type="checkbox" name="mc5" value="ON"> Psychoses et 
+				neuroses.</td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr align="center" width="70%" /></td>
+			</tr>
+			<tr>
+				<td>
+				<input type="submit" value="S'inscrire" name="b1" style="float: right"></td>
+				<td><input type="button" value="Annuler" name="b2"></td>
+			</tr>
+		</table>
+	</div>
+</form>
+</body>
+
+</html>

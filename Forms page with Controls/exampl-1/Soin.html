@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Nouvelle page 1</title>
+		<script language="javascript" src="Control.js"></script>
+	</head>
+
+<body bgcolor="#00FF">
+<form name="f" action="Soin.php" method="post" onsubmit="return valider()">
+	<div>
+		<p><h1 align="center" style="color: red">Saisie d'un soin</h1></p><br>
+		<hr align="center" width="65%" style="margin-bottom: 20px;" />
+	</div>
+	<div>
+		<table border="0" width="100%" align="center">
+			
+			<tr>
+				<td>
+				<p align="center"><font size="4"><b><i>Matricule :</i></b></font></td>
+				<td><input type="text" name="ma" size="20"></td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">Date du soin :</font></b></i></td>
+				<td><input type="text" name="ds" size="10"></td>
+			</tr>
+
+			<tr>
+				<td align="center"><i><b><font size="4">Montant du soin :</font></b></i></td>
+				<td><input type="text" name="ms" size="10"></td>
+			</tr>
+			
+			<tr>
+				<td colspan="2"><hr align="center" width="70%" /></td>
+			</tr>
+			<tr>
+				<td>
+				<input type="submit" value="Confirmer" name="b1" style="float: right"></td>
+				<td><input type="reset" value="Annuler" name="b2"></td>
+			</tr>
+		</table>
+	</div>
+</form>
+</body>
+
+</html>

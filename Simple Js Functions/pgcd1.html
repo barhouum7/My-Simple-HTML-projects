@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calcul PGCD ...</title>
+ 	<script type="text/javascript" language="javascript">
+
+	function pgcd(a,b)
+	{
+		while (b != 0)
+		{
+			r = a % b ;
+			a = b;
+			b = r;
+		}
+
+		return(a);
+	}//Fin Function PGCD ...
+ 	</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript">
+
+	do
+	{
+		a = Number(prompt("Donner un entier :","0"));
+		b = Number(prompt("Donner un entier :","0"));
+	}while (a <0 || b <0) ;
+
+
+	alert("Le PGCD de "+a+" et "+b+" est : "+pgcd(a,b));
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+
+<head>
+<title>Inscription</title>
+<script language="javascript" src="controle.js"></script>
+</head>
+
+<body onload="date()">
+
+<form name="f" method="POST" action="ajout.php">
+	<p align="center" style="margin-bottom: 0"><font size="7" face="Palatino Linotype">Inscription</font></p>
+	<hr width="70%" size="4" color="#C0C0C0" />
+	<div align="center">
+	<table border="0" width="60%">
+		<tr>
+			<td>CIN</td>
+			<td><input type="text" name="T1" size="30" maxlength="8"></td>
+		</tr>
+		<tr>
+			<td>Nom et prénom :</td>
+			<td><input type="text" name="T2" size="30"></td>
+		</tr>
+		<tr>
+			<td>Section</td>
+			<td><select size="1" name="D1">
+			<option>4SI</option>
+			<option>4Math</option>
+			<option>4Tech</option>
+			<option>4SExp</option>
+			<option>4EG</option>
+			<option>4Lettre</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td>Sexe</td>
+			<td>
+				<input type="radio" value="Masculin" checked name="R1">Masculin
+				<input type="radio" name="R1" value="Féminin">Féminin
+			</td>
+		</tr>
+		<tr>
+			<td>Date de naissance</td>
+			<td><select size="1" name="j">
+			<option>jours</option>
+			</select> / <select size="1" name="m">
+			<option>mois</option>
+			</select> /&nbsp; <select size="1" name="a">
+			<option>année</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td>Moyenne</td>
+			<td><input type="text" name="T3" size="30"></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+			<table border="0" width="40%">
+				<tr>
+					<td><input type="submit" value="Envoyer" name="B1"></td>
+					<td><input type="reset" value="Annuler" name="B2"></td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+	</table>
+	</div>
+	<p></p>
+</form>
+
+</body>
+
+</html>

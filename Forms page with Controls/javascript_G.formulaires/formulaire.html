@@ -1,0 +1,156 @@
+<html>
+
+<head>
+<script language="javascript">
+function verif()
+{
+nom= f.n.value.toUpperCase();
+cin= f.c.value;
+mail= f.m.value;
+ville= f.v.value;
+
+if (nom=="") {alert("Tapez votre nom svp ! "); return false;}
+
+for (i=0; i<nom.length; i++)
+if (nom.charAt(i)<"A" || nom.charAt(i)>"Z")
+{alert("Nom invalide"); return false;}
+
+
+if (cin=="") {alert("Tapez votre cin svp ! "); return false;}
+for (i=0; i<cin.length; i++)
+if (cin.charAt(i)<"0" || cin.charAt(i)>"9")
+{alert("Votre cin doit être numérique"); return false;}
+if (cin.length!=8){alert("Langueur de votre numéro de cin est invalide"); return false;}
+if (cin.charAt(0)!="0"){alert("Votre numéro de cin est commence par 0 svp !"); return false;}
+
+
+
+if (mail=="") {alert("Tapez votre e-mail svp ! "); return false;}
+if (mail.indexOf("@")==-1){alert("Votre e-mail est invalide"); return false;}
+if (mail.indexOf("@")>mail.indexOf(".")){alert("Votre e-mail est invalide svp saisir une autre fois comme l'exemple suivante: alimed@gmail.com "); return false;}
+
+
+if (f.s[0].checked==false && f.s[1].checked==false)
+{alert("Choisir votre sexe svp !"); return false;}
+
+
+if (f.v.selectedIndex<1)
+{alert("Choisir une ville svp !"); return false;}
+
+
+if (f.m1.checked==false && f.m2.checked==false && f.m3.checked==false)
+{alert("Choisir un module svp !"); return false;}
+
+
+n1=f.n1.value;
+if (n1=="" && f.m1.checked) {alert("Tapez votre note HTML svp ! "); return false;}
+if (n1<0 || n1>20)
+{alert("Votre note HTML doit être entre 0 et 20 svp !"); return false;}
+if ((n1<0 || n1>20)&&(f.m1.checked))
+{alert("Verifier votre note HTML svp !"); return false;}
+
+
+
+n2=f.n2.value;
+if (n2=="" && f.m2.checked) {alert("Tapez votre note JAVA svp ! "); return false;}
+if (n2<0 || n2>20)
+{alert("Votre note JAVA doit être entre 0 et 20 svp !"); return false;}
+if ((n2<0 || n2>20)&&(f.m2.checked))
+{alert("Verifier votre note JAVA svp !"); return false;}
+
+
+
+n3=f.n3.value;
+if (n3=="" && f.m3.checked) {alert("Tapez votre note PHP svp ! "); return false;}
+if (n3<0 || n3>20)
+{alert("Votre note PHP doit être entre 0 et 20 svp !"); return false;}
+if ((n3<0 || n3>20)&&(f.m3.checked))
+{alert("Verifier votre note PHP svp !"); return false;}
+
+
+
+
+if (f.j.checked==false)
+{alert("L'acceptation obligatoire svp !"); return false;}
+jaccepte=f.j.value;
+
+}
+
+</script>
+
+</head>
+
+<body>
+<fieldset style="padding: 2">
+<legend><i><b><font size="6" color="#008000">Inscription</font></b></i>&nbsp; </legend>
+<form name="f" action="enregistrer.html" onsubmit="return verif()">
+
+
+	<table border="0" width="76%">
+		<tr>
+			<td colspan="4">
+
+<p align="left">
+
+			</td>
+		</tr>
+		<tr>
+			<td width="22%" colspan="2">Nom</td>
+			<td width="778" colspan="2"><input type="text" name="n" size="20"></td>
+		</tr>
+		<tr>
+			<td width="22%" colspan="2">CIN :</td>
+			<td width="778" colspan="2"><input type="text" name="c" size="20"></td>
+		</tr>
+		<tr>
+			<td width="22%" colspan="2">Mail :</td>
+			<td width="778" colspan="2"><textarea rows="2" name="m" cols="20"></textarea></td>
+		</tr>
+		<tr>
+			<td width="22%" colspan="2">Sexe :</td>
+			<td width="778" colspan="2">
+			<input type="radio" value="V1" name="s">femelle
+			<input type="radio" value="V2" name="s">male</td>
+		</tr>
+		<tr>
+			<td width="22%" colspan="2" height="41">Ville :</td>
+			<td width="778" colspan="2" height="41"><select size="1" name="v">
+			<option>Choisir une ville</option>
+			<option>souse</option>
+			<option>sfax</option>
+			<option>tunis</option>
+			<option>nabeul</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td width="10%">Modules :</td>
+			<td width="12%">&nbsp;<p><input type="checkbox" name="m1" value="ON">HTML</p>
+			<p>
+			<input type="checkbox" name="m2" value="ON">JAVA</p>
+			<p><input type="checkbox" name="m3" value="ON">PHP</p>
+			<p>&nbsp;</td>
+			<td width="97">
+			<p align="center">Notes :</td>
+			<td width="668">
+			<p><input type="text" name="n1" size="20"></p>
+			<p><input type="text" name="n2" size="20"></p>
+			<p><input type="text" name="n3" size="20"></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%" colspan="2">
+			&nbsp;<p>
+			<input type="reset" value="Annuler" name="b1"></td>
+			<td width="778" colspan="2">
+			&nbsp;<p>
+			<input type="checkbox" name="j" value="ON"> J'accepte&nbsp;
+			<input type="submit" value="Enregistrer" name="b2"></td>
+		</tr>
+</table>
+
+
+</form>
+</fieldset>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Inscription</title>
+		<script language="javascript" src="Control.js"></script>
+	</head>
+
+<body bgcolor="#00FF">
+<form name="f" action="Inscrire.php" method="post" onsubmit="return verif()">
+	<div>
+		<p><h1 align="center" style="color: red">Inscription d'un(e) assuré(e)</h1></p><br>
+		<hr align="center" width="65%" style="margin-bottom: 20px;" />
+	</div>
+	<div>
+		<table border="0" width="100%" align="center">
+			
+			<tr>
+				<td>
+				<p align="center"><font size="4"><b><i>Matricule :</i></b></font></td>
+				<td><input type="text" name="ma" size="20"></td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">NCIN :</font></b></i></td>
+				<td><input type="text" name="c" size="20"></td>
+			</tr>
+
+			<tr>
+				<td align="center"><i><b><font size="4">Nom :</font></b></i></td>
+				<td><input type="text" name="n" size="20"></td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">Prénom :</font></b></i></td>
+				<td><input type="text" name="p" size="20"></td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">Etat civil :</font></b></i></td>
+				<td><input type="radio" value="V3" name="ec">&nbsp;&nbsp;Célibataire
+				<input type="radio" value="V4" name="ec">&nbsp;&nbsp;Marié
+				<input type="radio" value="V5" name="ec">&nbsp;&nbsp;Divorcé</td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">Nombre d'enfants assurées :</font></b></i></td>
+				<td><input type="text" name="nbe" size="20"></td>
+			</tr>
+			
+			<tr>
+				<td align="center"><i><b><font size="4">Type d'assurance :</font></b></i></td>
+				<td><select size="4" name="ta">
+				<option>Choisir le Type</option>
+				<option>Santé publique</option>
+				<option>Medecin de famille</option>
+				<option>Remboursement des dépenses</option>
+				</select></td>
+			</tr>
+			
+			<tr>
+				<td colspan="2"><hr align="center" width="70%" /></td>
+			</tr>
+			<tr>
+				<td>
+				<input type="submit" value="S'inscrire" name="b1" style="float: right"></td>
+				<td><input type="button" value="Annuler" name="b2"></td>
+			</tr>
+		</table>
+	</div>
+</form>
+</body>
+
+</html>

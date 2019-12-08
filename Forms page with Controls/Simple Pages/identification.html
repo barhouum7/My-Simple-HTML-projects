@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<script language="javascript">
+cpt=0;
+function test()
+{
+login=f.l.value;
+password=f.mp.value;
+
+if (login==""){ alert("Saisir le login svp !"); return false;}
+if (password==""){ alert("Saisir le password svp !"); return false;}
+
+if (login!="admin" || password!="admin")
+{cpt++; alert("Login et password incorrect svp saisir une autre fois"); return false;}
+
+if (cpt==3)
+{window.document.action1.close();
+action1="this close()";}
+ 
+
+
+}
+
+</script>
+
+</head>
+
+<body action1="window.close()">
+<form name="f" action="index.html" onsubmit="return test()">
+
+<fieldset style="padding: 22">
+<legend><font face="Bradley Hand ITC"><i><b>Identification</b></i></font></legend>
+<table border="0" width="85%">
+	
+	<tr>
+		<td width="37%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Login</td>
+		<td width="51%"><input type="text" name="l" size="24"></td>
+	</tr>
+	<tr>
+		<td width="37%">&nbsp;&nbsp;&nbsp; Mot de passe</td>
+		<td width="51%"><input type="password" name="mp" size="24"></td>
+	</tr>
+	<tr>
+		<td width="37%">&nbsp;<p><input type="reset" value="Annuler" name="B1"></td>
+		<td width="51%">&nbsp;<p><button name="B2" style="width: 222px; height: 32px">
+		S'identifier&nbsp; &gt;&gt;&gt;</button></td>
+	</tr>
+</table>
+
+
+</fieldset>
+
+</form>
+</body>
+
+</html>

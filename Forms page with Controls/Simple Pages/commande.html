@@ -1,0 +1,96 @@
+<html>
+
+<head>
+<script language="javascript">
+function valide2()
+{
+mat=f.mfc.value.toUpperCase();
+
+
+
+
+if (mat=="") {alert("Tapez votre matricule fiscal client svp ! "); return false;}
+for (i=0; i<mat.length; i++)
+if (mat.charAt(i)<"0" || mat.charAt(i-1)>"9")
+{alert("Votre matricule fiscal client doit être numérique"); return false;}
+if (mat.length!=7){alert("Langueur de votre matricule fiscal client doit être une chaine numérique de 7 chiffres"); return false;}
+if (mat.charAt(i-1)<"A" || mat.charAt(i-1)>"Z")
+{alert("Votre matricule fiscal client est invalide, et la dernière chiffre est un caractère alphabétique majuscule."); return false;}
+
+quantite=f.q.value;
+if (quantite=="") {alert("Donner une quantité svp !"); return false;}
+for (i=0; i<quantite.length; i++)
+if (quantite.charAt(i)<"0" || quantite.charAt(i)>"9")
+{alert("Votre quantité doit être numérique"); return false;}
+if(quantite<1 || quantite>100) 
+{alert("Votre quantité est un entier compris entre 1 et 100"); return false;}
+
+
+mode=f.mp.value;
+if(f.mp[0].checked==false && f.mp[1].checked==false)
+{alert("Choisir le mode de payement svp !"); return false;}
+
+
+
+
+
+
+
+}
+
+
+</script>
+
+</head>
+
+<body>
+<form name="f" action="submit.html" onsubmit="return valide2()">
+
+
+<fieldset style="padding: 22">
+<legend><i><b><font size="4" face="Bradley Hand ITC">Commande</font></b></i></legend>
+
+<table border="0" width="100%">
+	
+	<tr>
+		<td>Matricule fiscal client (*)</td>
+		<td><input type="text" name="mfc" size="43"></td>
+	</tr>
+	<tr>
+		<td>Date Commande (**)</td>
+		<td><input type="text" name="j" size="6"> /
+		<input type="text" name="m" size="6"> / 
+		<input type="text" name="a" size="13"></td>
+	</tr>
+	<tr>
+		<td> Article </td>
+		<td><select size="1" name="ar">
+		<option>Ecran</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td>Quantité</td>
+		<td><input type="text" name="q" size="12"></td>
+	</tr>
+	<tr>
+		<td>Mode payement </td>
+		<td><input type="radio" value="V1" name="mp">Comptant
+		<input type="radio" value="V1" name="mp">Facilité</td>
+	</tr>
+	<tr>
+		<td>Prix Totale (***)</td>
+		<td><input type="text" name="pt" size="20"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;<p><input type="reset" value="Annuler" name="b1"></td>
+		<td>&nbsp;<p><button name="b2" style="width: 244px; height: 30px">Enregistrer &gt;&gt;&gt;
+		</button></td>
+	</tr>
+</table>
+
+
+</fieldset>
+</form>
+</body>
+
+</html>

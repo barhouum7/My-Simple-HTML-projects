@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" language="javascript">
+		function calcul()
+		{
+			f.l.value = f.n.value.length ;
+		}
+
+		function majus()
+		{
+			f.n.value = f.n.value.toUpperCase() ;	
+		}
+
+		function minus()
+		{
+			f.n.value = f.n.value.toLowerCase() ; 
+		}
+
+		function aff1()
+		{
+			alert("Bienvenue Ms. !!") ;	
+		}
+
+		function aff2()
+		{
+			alert("Aurevoir Ms. !!") ;
+		}
+	</script>
+</head>
+<body onload="aff1()" onunload="aff2()" bgcolor="#C0C0">
+<form name="f">
+	<table border="0" width="75%">
+			<tr>
+				<td>Nom : <input type="text" name="n" size="20" onkeyup="calcul()" onblur="majus()" onfocus="minus()"></td>
+				<td>Longeur : <input type="text" name="l" size="20"></td>
+			</tr>
+	</table>
+
+</form>
+</body>
+</html>

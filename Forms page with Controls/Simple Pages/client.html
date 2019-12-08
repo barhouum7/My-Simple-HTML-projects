@@ -1,0 +1,120 @@
+<html>
+
+<head>
+<script language="javascript">
+function valide1()
+{
+type=f.tc.value;
+nom=f.n.value;
+raison=f.r.value;
+mat=f.m.value.toUpperCase();
+secteur=f.sa.value;
+
+
+
+if (f.tc[0].checked==false && f.tc[1].checked==false)
+{alert("Choisir votre type svp !"); return false;}
+
+if (f.tc[0].checked)
+{
+if(nom=="")
+{alert("Tapez votre nom et prénom svp !"); return false;}
+if (raison!="")
+{alert("Tapez votre matricule fiscal svp !"); return false;}
+}
+
+if (f.tc[1].checked)
+{
+if (raison=="")
+{alert("Tapez votre raison sociale svp !"); return false;}
+if(nom!="")
+{alert("Tapez votre matricule fiscal svp !"); return false; nom=document.f.disabled();}
+
+}
+
+if (mat==""){alert("Tapez votre matricule fiscal svp !"); return false;}
+for (i=0; i<mat.length; i++)
+if (mat.charAt(i)<"0" || mat.charAt(i-1)>"9")
+{alert("Votre matricule fiscal doit être numérique"); return false;}
+if (mat.length!=7)
+{alert("Langueur de votre matricule fiscal doit être une chaine numérique de 7 chiffres"); return false;}
+if (mat.charAt(i-1)<"A" || mat.charAt(i-1)>"Z")
+{alert("Votre matricule fiscal est invalide, et la dernière chiffre est un caractère alphabétique majuscule."); return false;}
+
+if (secteur==""){alert("Le secteur d'activité est obligatoire. "); return false;}
+ 
+
+
+alert("Merci pour votre inscription");
+}
+
+/*function remplie()
+{
+if (document.f.tc[0].checked)
+document.f.r.disabled;
+else
+document.f.n.disabled;
+}
+*/
+
+
+</script>
+
+</head>
+
+<body>
+<form name="f" onsubmit="return valide1()">
+
+
+<fieldset style="padding: 22">
+<legend><font face="Bradley Hand ITC"><i><b>Inscription Client </b></i></font></legend>
+<table border="0" width="100%">
+
+	<tr>
+		<td>Type client (*)</td>
+		<td width="280"><input type="radio" value="V1" name="tc">Moral
+		<input type="radio" value="V1" name="tc">Physique</td>
+	</tr>
+	<tr>
+		<td>Nom et prénom (**)</td>
+		<td width="280"><input type="text" name="n" size="20"></td>
+	</tr>
+	<tr>
+		<td>Raison sociale (**)</td>
+		<td width="280"><input type="text" name="r" size="20"></td>
+	</tr>
+	<tr>
+		<td>Matricule fiscal (Exemple : 0031458D)</td>
+		<td width="280"><input type="text" name="m" size="20"></td>
+	</tr>
+	<tr>
+		<td>Secteur activité </td>
+		<td width="280"><textarea rows="2" name="sa" cols="20"></textarea></td>
+	</tr>
+	<tr>
+		<td>Tél 1</td>
+		<td width="280"><input type="text" name="t1" size="20"></td>
+	</tr>
+	<tr>
+		<td>Tél 2 (***)</td>
+		<td width="280"><input type="text" name="t2" size="20"></td>
+	</tr>
+	<tr>
+		<td>Situation juridique</td>
+		<td width="280"><input type="checkbox" name="ea" value="ON">En activité
+		<input type="checkbox" name="el" value="ON">En 
+		liqudation</td>
+	</tr>
+	<tr>
+		<td>&nbsp;<p><input type="reset" value="Annuler" name="b1"></td>
+		<td width="280">&nbsp;<p><button name="b2">Enregistrer &gt;&gt;&gt;</button></td>
+	</tr>
+</table>
+
+
+</fieldset>
+
+</form>
+</body>
+
+</html>

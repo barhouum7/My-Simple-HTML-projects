@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title> Page Spectacle ! </title>
+	<script type="text/javascript" src="controle.js"></script>
+	<style type="text/css">
+
+		.buttonn{
+			/*background-color: #ccc;*/
+			padding: 4px;
+			display: block;
+			box-shadow: 0px 2px 30px #000 ;
+			transition: all 0.3s ease-in-out;
+			margin-bottom: 20px;
+			outline: 0;
+
+
+		}
+
+		.buttonn:haver{
+			box-shadow: none;
+			
+		}
+
+	</style>
+</head>
+<body bgcolor="#C0C0" onload="view_date()">
+	<form name="f" action="ajouter.php" onsubmit="return verif()" method="POST">
+		<p style="margin-bottom: 20px;"></p>
+		<div align="center">
+			<fieldset style="padding: 18; margin-right: 20px; margin-left: 20px;">
+				<legend style="margin-bottom: 40px;">
+					<font size="4" face="Matura MT Script Capitals"><b><i> Ajout d'un spectacle </i></b></font>
+				</legend>
+				<table width="100%" border="0" bgcolor="#C0C0C0" style="margin-bottom: 340px;">
+					<tr>
+						<td style="text-align: center;">
+							Pièce :<br/>
+							<p>
+								<select name="p" size="6" style="cursor: pointer;">
+									<option>Choisir une pièce</option>
+									<option>Le trésor</option>
+									<option>Le péché du succès</option>
+									<option>Le gardien</option>
+									<option>Les soldats de la lune</option>
+									<option>L'éternel retour</option>
+								</select>
+							</p>
+						</td>
+						<td style="text-align: center;">
+							Salle :<br/>
+							<p>
+								<select name="s" size="5" style="cursor: pointer;">
+									<option>Choisir une salle</option>										
+									<option>Théâtre Municipal</option>										
+									<option>Quatrième Art</option>										
+									<option>L'Etoile du Nord</option>										
+									<option>Espace Artisto</option>										
+								</select>
+							</p>
+						</td>
+						<td style="text-align: center;">
+							Date du spectacle :<br/>
+							<p>
+								<input type="text" name="j" size="2" style="background-color: #00FFFF;">&nbsp;/
+								<input type="text" name="m" size="2" style="background-color: #00FFFF;">&nbsp;/
+								<input type="text" name="a" size="5" style="background-color: #00FFFF;">&nbsp;<b style="font-size: 10px;"><i>(JJ/MM/AAAA)</i></b>
+							</p>
+						</td>
+					</tr>
+					<tr>
+							<td></td>
+							<td></td>
+							<td align="center">
+								<input class="buttonn" type="reset" name="b1" value="<< Annuler" style="float: left; margin-right: 15px; cursor: pointer;">
+								<input class="buttonn" type="submit" name="b2" value="Ajouter >>" style="float: left; cursor: pointer;">
+							</td>
+					</tr>
+					
+				</table>
+			</fieldset>
+		</div>
+	</form>
+</body>
+</html>
